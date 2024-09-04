@@ -16,7 +16,7 @@ public class RegisterPanel extends JPanel {
     public RegisterPanel() {
 
         this.setBorder(BorderFactory.createTitledBorder("Register Panel"));
-        this.setPreferredSize(new Dimension(700, 700));
+        this.setPreferredSize(new Dimension(700, 1000));
         this.setBackground(new Color(50, 168, 168));
 
         textField = new JTextField(16);

@@ -8,7 +8,7 @@ public class PursePanel extends JPanel {
     public PursePanel() {
 
         this.setBorder(BorderFactory.createTitledBorder("Purse"));
-        this.setPreferredSize(new Dimension(700, 700));
+        this.setPreferredSize(new Dimension(700, 1000));
         this.setBackground(new Color(204, 137, 96));
 
         label = new JLabel();
@@ -48,6 +48,13 @@ public class PursePanel extends JPanel {
         if ((temp = Purse.cash.get(Purse.ten)) > 0) {
             for (int i = 0; i < temp; i++){
                 ImageIcon ImageIcon = new ImageIcon(purse.getImg(Purse.ten));
+                g.drawImage(ImageIcon.getImage(), 20+(i*40), nexty-50, null);
+            }
+            nexty += 110;
+        }
+        if ((temp = Purse.cash.get(Purse.five)) > 0) {
+            for (int i = 0; i < temp; i++){
+                ImageIcon ImageIcon = new ImageIcon(purse.getImg(Purse.five));
                 g.drawImage(ImageIcon.getImage(), 20+(i*40), nexty-50, null);
             }
             nexty += 110;
