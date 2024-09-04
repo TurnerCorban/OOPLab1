@@ -42,8 +42,9 @@ public class RegisterPanel extends JPanel {
 
             purse = Register.makeChange(amt);
 
-            label.setBounds(50,50,100,30);
+            label.setBounds(50, 50, 100, 30);
             label.setText(purse.toStringHtml());
+
 
             revalidate();
             repaint();

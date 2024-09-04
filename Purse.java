@@ -13,7 +13,7 @@ public class Purse{
     static Denomination twenty = new Denomination("Twenty Dollar Note", 20, "bill", "twenty_note.png");
     static Denomination fifty = new Denomination("Fifty Dollar Note", 50, "bill", "fifty_note.png");
     static Denomination onehundred = new Denomination("One Hundred Dollar Note", 100, "bill", "hundred_note.png");
-    HashMap<Denomination, Integer> cash = new HashMap<Denomination, Integer>();
+    static HashMap<Denomination, Integer> cash = new HashMap<Denomination, Integer>();
 
     public Purse() {
         this.amt = amt;
@@ -31,7 +31,7 @@ public class Purse{
         return cash.get(type);
     }
 
-    public String getImg(Denomination type){
+    public static String getImg(Denomination type){
 
         return type.img();
     }
