@@ -32,7 +32,6 @@ public class Register {
         purse.add(Purse.nickel, Math.round((int)change/5));
         change=change%5;
         purse.add(Purse.penny, Math.round((int)change/1));
-
         return purse;
     }
 

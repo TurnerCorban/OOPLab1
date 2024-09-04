@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.util.HashMap;
 
 public class Purse{
@@ -26,8 +27,13 @@ public class Purse{
         return 0;
     }
 
-    public double getValue() {
-        return amt;
+    public double getValue(Denomination type) {
+        return cash.get(type);
+    }
+
+    public String getImg(Denomination type){
+
+        return type.img();
     }
 
     public String toString(){
@@ -48,5 +54,47 @@ public class Purse{
         }
 
         return output;
+    }
+    public String toStringHtml(){
+        String output = "<html>";
+        int temp = 0;
+        temp = cash.get(onehundred);
+        if ((temp = cash.get(onehundred)) > 0) output += (temp + " Hundred Dollar Bills <br>");
+        if ((temp = cash.get(fifty)) > 0) output += (temp + " Fifty Dollar Bills <br>");
+        if ((temp = cash.get(twenty)) > 0) output += (temp + " Twenty Dollar Bills <br>");
+        if ((temp = cash.get(five)) > 0) output += (temp + " Five Dollar Bills <br>");
+        if ((temp = cash.get(one)) > 0) output += (temp + " One Dollar Bills <br>");
+        if ((temp = cash.get(quarter)) > 0) output += (temp + " Quarters <br>");
+        if ((temp = cash.get(dime)) > 0) output += (temp + " Dimes <br>");
+        if ((temp = cash.get(nickel)) > 0) output += (temp + " Nickles <br>");
+        if ((temp = cash.get(penny)) > 0) output += (temp + " Pennies <br>");
+        output += "</html>";
+        if (output == "<html><html>"){
+            output = "Empty Purse";
+        }
+
+        return output;
+    }
+}
+
+record Denomination(String name, double amt, String form, String img){
+    public Denomination(String name, double amt, String form, String img){
+        this.name = name;
+        this.amt = amt;
+        this.form = form;
+        this.img = img;
+    }
+
+    public String getName() {
+        return name;
+    }
+    public final double getAmt() {
+        return amt;
+    }
+    public String getForm() {
+        return form;
+    }
+    public String getImg() {
+        return img;
     }
 }
