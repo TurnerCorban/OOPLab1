@@ -16,7 +16,7 @@ public class RegisterPanel extends JPanel {
     public RegisterPanel() {
 
         this.setBorder(BorderFactory.createTitledBorder("Register Panel"));
-        this.setPreferredSize(new Dimension(700, 500));
+        this.setPreferredSize(new Dimension(700, 700));
         this.setBackground(new Color(50, 168, 168));
 
         textField = new JTextField(16);
@@ -42,8 +42,9 @@ public class RegisterPanel extends JPanel {
 
             purse = Register.makeChange(amt);
 
-            label.setBounds(50,50,100,30);
+            label.setBounds(50, 50, 100, 30);
             label.setText(purse.toStringHtml());
+
 
             revalidate();
             repaint();
