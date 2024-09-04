@@ -43,6 +43,7 @@ public class Purse{
         if ((temp = cash.get(onehundred)) > 0) output += (temp + " Hundred Dollar Bills\n");
         if ((temp = cash.get(fifty)) > 0) output += (temp + " Fifty Dollar Bills\n");
         if ((temp = cash.get(twenty)) > 0) output += (temp + " Twenty Dollar Bills\n");
+        if ((temp = cash.get(ten)) > 0) output += (temp + " Ten Dollar Bills\n");
         if ((temp = cash.get(five)) > 0) output += (temp + " Five Dollar Bills\n");
         if ((temp = cash.get(one)) > 0) output += (temp + " One Dollar Bills\n");
         if ((temp = cash.get(quarter)) > 0) output += (temp + " Quarters\n");
@@ -62,6 +63,7 @@ public class Purse{
         if ((temp = cash.get(onehundred)) > 0) output += (temp + " Hundred Dollar Bills <br>");
         if ((temp = cash.get(fifty)) > 0) output += (temp + " Fifty Dollar Bills <br>");
         if ((temp = cash.get(twenty)) > 0) output += (temp + " Twenty Dollar Bills <br>");
+        if ((temp = cash.get(ten)) > 0) output += (temp + " Ten Dollar Bills <br>");
         if ((temp = cash.get(five)) > 0) output += (temp + " Five Dollar Bills <br>");
         if ((temp = cash.get(one)) > 0) output += (temp + " One Dollar Bills <br>");
         if ((temp = cash.get(quarter)) > 0) output += (temp + " Quarters <br>");
