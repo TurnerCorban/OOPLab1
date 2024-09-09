@@ -8,7 +8,7 @@ public class PursePanel extends JPanel {
     public PursePanel() {
 
         this.setBorder(BorderFactory.createTitledBorder("Purse"));
-        this.setPreferredSize(new Dimension(700, 1000));
+        this.setPreferredSize(new Dimension(700, 800));
         this.setBackground(new Color(204, 137, 96));
 
         label = new JLabel();
@@ -20,10 +20,8 @@ public class PursePanel extends JPanel {
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         g.setFont(new Font("sansserif", Font.PLAIN, 30));
-        int nexty = 100;
-        int textx = 300;
+        int nexty = 70;
         int temp = 0;
-        temp = Purse.cash.get(Purse.onehundred);
         if ((temp = Purse.cash.get(Purse.onehundred)) > 0) {
             for (int i = 0; i < temp; i++){
                 ImageIcon ImageIcon = new ImageIcon(purse.getImg(Purse.onehundred));

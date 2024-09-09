@@ -70,8 +70,8 @@ public class Purse{
         if ((temp = cash.get(dime)) > 0) output += (temp + " Dimes <br>");
         if ((temp = cash.get(nickel)) > 0) output += (temp + " Nickles <br>");
         if ((temp = cash.get(penny)) > 0) output += (temp + " Pennies <br>");
-        output += "</html>";
-        if (output == "<html><html>"){
+        output += "<html>";
+        if (output.equals("<html><html>")){
             output = "Empty Purse";
         }
 
